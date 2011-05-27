@@ -2613,7 +2613,8 @@ Seadragon._DziTileSourceHelper.prototype = {
         }
 
         var root = xmlDoc.documentElement;
-        var rootName = root.tagName;
+        // use localName instead of tagName in order to be namespace agnostic
+        var rootName = root.localName;
 		
         if (rootName == "Image") {
             try {

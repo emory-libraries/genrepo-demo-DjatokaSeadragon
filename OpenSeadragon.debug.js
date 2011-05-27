@@ -3071,30 +3071,34 @@ Seadragon.Config = function () {
 
     this.mouseNavEnabled = true;
 
+    // default image path.  Override in viewer init with something like this:
+    // Seadragon.Config.imagePath = "/path/to/seadragon/images/"; 
+    this.imagePath = './images/';
+
     this.navImages = {
         zoomIn: {
-            REST: './images/zoomin_rest.png',
-            GROUP: './images/zoomin_grouphover.png',
-            HOVER: './images/zoomin_hover.png',
-            DOWN: './images/zoomin_pressed.png'
+            REST: Seadragon.Config.imagePath + 'zoomin_rest.png',
+            GROUP: Seadragon.Config.imagePath + 'zoomin_grouphover.png',
+            HOVER: Seadragon.Config.imagePath + 'zoomin_hover.png',
+            DOWN: Seadragon.Config.imagePath + 'zoomin_pressed.png'
         },
         zoomOut: {
-            REST: './images/zoomout_rest.png',
-            GROUP: './images/zoomout_grouphover.png',
-            HOVER: './images/zoomout_hover.png',
-            DOWN: './images/zoomout_pressed.png'
+            REST: Seadragon.Config.imagePath + 'zoomout_rest.png',
+            GROUP: Seadragon.Config.imagePath + 'zoomout_grouphover.png',
+            HOVER: Seadragon.Config.imagePath + 'zoomout_hover.png',
+            DOWN: Seadragon.Config.imagePath + '.zoomout_pressed.png'
         },
         home: {
-            REST: './images/home_rest.png',
-            GROUP: './images/home_grouphover.png',
-            HOVER: './images/home_hover.png',
-            DOWN: './images/home_pressed.png'
+            REST: Seadragon.Config.imagePath + 'home_rest.png',
+            GROUP: Seadragon.Config.imagePath + 'home_grouphover.png',
+            HOVER: Seadragon.Config.imagePath + 'home_hover.png',
+            DOWN: Seadragon.Config.imagePath + 'home_pressed.png'
         },
         fullpage: {
-            REST: './images/fullpage_rest.png',
-            GROUP: './images/fullpage_grouphover.png',
-            HOVER: './images/fullpage_hover.png',
-            DOWN: './images/fullpage_pressed.png'
+            REST: Seadragon.Config.imagePath + 'fullpage_rest.png',
+            GROUP: Seadragon.Config.imagePath + 'fullpage_grouphover.png',
+            HOVER: Seadragon.Config.imagePath + 'fullpage_hover.png',
+            DOWN: Seadragon.Config.imagePath + 'fullpage_pressed.png'
         }
     }
 }
